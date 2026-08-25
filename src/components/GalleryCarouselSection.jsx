@@ -1,37 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { GALLERY_IMAGES } from '../data/spaData';
-import { ChevronLeft, ChevronRight, Eye, X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 export default function GalleryCarouselSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [activeImageModal, setActiveImageModal] = useState(null);
 
-  // Auto-scroll carousel every 4 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [currentIndex]);
-
-  const itemsPerPage = 3;
-  const totalSlides = GALLERY_IMAGES.length;
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? totalSlides - itemsPerPage : Math.max(0, prev - 1)));
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev >= totalSlides - itemsPerPage ? 0 : prev + 1));
-  };
-
-  // Get current 3 visible images
-  const visibleImages = GALLERY_IMAGES.slice(currentIndex, currentIndex + itemsPerPage);
-  
-  // If near end, fill remaining slots from beginning for seamless loop
-  if (visibleImages.length < itemsPerPage) {
-    visibleImages.push(...GALLERY_IMAGES.slice(0, itemsPerPage - visibleImages.length));
-  }
+  // Duplicate images for infinite seamless 360-degree marquee loop
+  const infiniteImages = [...GALLERY_IMAGES, ...GALLERY_IMAGES];
 
   return (
     <section className="py-20 bg-white border-b border-amber-200/80 relative overflow-hidden">
@@ -50,66 +25,31 @@ export default function GalleryCarouselSection() {
           </p>
         </div>
 
-        {/* Carousel Image Container (PURE CLEAN IMAGES, NO TEXT OVERLAYS) */}
-        <div className="relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700 ease-in-out">
-            {visibleImages.map((img, idx) => (
-              <div
-                key={`${img.id}-${idx}`}
-                onClick={() => setActiveImageModal(img)}
-                className="group relative h-64 sm:h-72 rounded-3xl overflow-hidden border-2 border-amber-300/80 cursor-pointer shadow-lg bg-white"
-              >
-                {/* Pure Clean Photo Image */}
-                <img
-                  src={img.url}
-                  alt="RR Luxury Spa"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                
-                {/* Subtle Hover Zoom Overlay */}
-                <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full bg-gold-gradient flex items-center justify-center text-slate-950 shadow-xl scale-75 group-hover:scale-100 transition-transform duration-300">
-                    <Eye className="w-6 h-6" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      </div>
 
-          {/* Carousel Left & Right Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 sm:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-slate-900/90 hover:bg-gold-gradient text-white hover:text-slate-950 flex items-center justify-center shadow-xl border border-amber-400 backdrop-blur-md transition-all hover:scale-110"
-            aria-label="Previous Photo"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
+      {/* CONTINUOUS SMOOTH MARQUEE CAROUSEL TRACK (PAUSES ON MOUSE HOVER, NO DOTS) */}
+      <div className="relative w-full overflow-hidden py-2">
+        {/* Left & Right Subtle Soft Gradient Fade Overlays */}
+        <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 sm:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-slate-900/90 hover:bg-gold-gradient text-white hover:text-slate-950 flex items-center justify-center shadow-xl border border-amber-400 backdrop-blur-md transition-all hover:scale-110"
-            aria-label="Next Photo"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-        </div>
-
-        {/* Carousel Pagination Dots */}
-        <div className="flex items-center justify-center gap-2 mt-10">
-          {Array.from({ length: totalSlides }).map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentIndex(idx)}
-              className={`h-2.5 rounded-full transition-all duration-500 ${
-                idx === currentIndex
-                  ? 'w-8 bg-amber-600 shadow-sm'
-                  : 'w-2.5 bg-slate-300 hover:bg-amber-400'
-              }`}
-              aria-label={`Go to image ${idx + 1}`}
-            />
+        {/* Continuous Smooth Infinite Moving Track */}
+        <div className="animate-continuous-scroll flex gap-6 px-4">
+          {infiniteImages.map((img, idx) => (
+            <div
+              key={`${img.id}-${idx}`}
+              onClick={() => setActiveImageModal(img)}
+              className="w-72 sm:w-80 h-60 sm:h-72 rounded-3xl overflow-hidden border-2 border-amber-300/80 cursor-pointer shadow-md hover:shadow-2xl hover:border-amber-500 hover:scale-105 transition-all duration-300 shrink-0 bg-white group"
+            >
+              {/* Pure Clean Photo Image without overlays */}
+              <img
+                src={img.url}
+                alt="RR Luxury Spa Gallery"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           ))}
         </div>
-
       </div>
 
       {/* Enlarged Photo Lightbox Modal */}
@@ -122,6 +62,7 @@ export default function GalleryCarouselSection() {
             <button
               onClick={() => setActiveImageModal(null)}
               className="absolute top-6 right-6 p-2 rounded-full bg-slate-950/70 hover:bg-amber-600 text-white transition-colors z-10"
+              aria-label="Close Lightbox"
             >
               <X className="w-5 h-5" />
             </button>

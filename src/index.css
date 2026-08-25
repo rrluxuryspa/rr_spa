@@ -56,6 +56,26 @@
   transform: translateY(-4px);
 }
 
+/* Continuous Smooth Marquee Scroll for Gallery */
+@keyframes continuousScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-continuous-scroll {
+  display: flex;
+  width: max-content;
+  animation: continuousScroll 35s linear infinite;
+}
+
+.animate-continuous-scroll:hover {
+  animation-play-state: paused;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
