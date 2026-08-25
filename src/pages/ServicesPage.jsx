@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SERVICES } from '../data/spaData';
 import BookingForm from '../components/BookingForm';
-import { Calendar, Clock } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 export default function ServicesPage({ onOpenBooking, selectedPreselectedService = '' }) {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -26,7 +26,7 @@ export default function ServicesPage({ onOpenBooking, selectedPreselectedService
         </div>
       </section>
 
-      {/* 2. SERVICES GRID - CLEAN CARD: IMAGE, NAME, TIME, BOOK BUTTON */}
+      {/* 2. SERVICES GRID - CLEAN CARD: IMAGE, NAME, BOOK BUTTON */}
       <section className="py-16 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -47,14 +47,14 @@ export default function ServicesPage({ onOpenBooking, selectedPreselectedService
             ))}
           </div>
 
-          {/* Clean Service Cards Grid */}
+          {/* Clean Service Cards Grid Without Timings */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredServices.map((service) => (
               <div
                 key={service.id}
                 className="group rounded-3xl overflow-hidden border-2 border-emerald-200 shadow-md hover:shadow-xl hover:border-emerald-400 bg-white transition-all duration-300 flex flex-col"
               >
-                {/* Service Image - Takes full top portion */}
+                {/* Service Image */}
                 <div className="relative h-52 sm:h-60 overflow-hidden">
                   <img
                     src={service.image}
@@ -63,23 +63,18 @@ export default function ServicesPage({ onOpenBooking, selectedPreselectedService
                   />
                 </div>
 
-                {/* Card Bottom: Name, Time, Book Button */}
+                {/* Card Bottom: Name & Book Button */}
                 <div className="p-4 flex flex-col gap-3 flex-1 justify-between">
                   {/* Service Name */}
                   <h3 className="font-serif text-lg font-extrabold text-slate-900 group-hover:text-emerald-800 transition-colors leading-tight">
                     {service.name}
                   </h3>
 
-                  {/* Time & Book Row */}
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="flex items-center gap-1 text-xs text-slate-600 font-semibold">
-                      <Clock className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
-                      <span>{service.duration}</span>
-                    </span>
-
+                  {/* Book Button */}
+                  <div className="pt-2">
                     <button
                       onClick={() => onOpenBooking(service.name)}
-                      className="px-4 py-2 rounded-xl bg-emerald-gradient text-white font-bold text-xs border border-emerald-400 hover:shadow-md hover:scale-105 transition-all flex items-center gap-1.5 shrink-0"
+                      className="w-full py-2.5 rounded-xl bg-emerald-gradient text-white font-bold text-xs border border-emerald-400 hover:shadow-md hover:scale-[1.02] transition-all flex items-center justify-center gap-1.5"
                     >
                       <Calendar className="w-3.5 h-3.5" />
                       <span>Book Service</span>

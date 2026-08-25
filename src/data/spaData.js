@@ -20,7 +20,6 @@ export const SERVICES = [
     name: "Oil Massage",
     tagline: "Essential Aromatic Oil Therapy & Muscle Relief",
     description: "Immerse yourself in pure essential oils warming gently over your skin. Designed to relieve deep stress, improve blood circulation, and soothe tired muscles in a serene sanctuary.",
-    duration: "60 / 90 Mins",
     category: "Massage Therapies",
     image: "/oil_mas.jpg",
     features: ["Warm Essential Oils", "Custom Muscle Pressure", "Circulation Boosting", "Private Luxury Suite"]
@@ -30,7 +29,6 @@ export const SERVICES = [
     name: "Cream Massage",
     tagline: "Ultra-Nourishing Botanical Hydration & Soft Touch",
     description: "Indulge in a rich, velvety botanical massage cream that deeply hydrates dehydrated skin while restoring muscle flexibility and releasing physical fatigue.",
-    duration: "60 / 90 Mins",
     category: "Massage Therapies",
     image: "/cream_mas.jpg",
     features: ["Deep Skin Hydration", "Silk Cream Texture", "Soft Tissue Release", "Calming Atmosphere"]
@@ -40,7 +38,6 @@ export const SERVICES = [
     name: "Dry Massage",
     tagline: "Oil-Free Acupressure & Traditional Stretch Therapy",
     description: "Ideal for fast muscle recovery without oils. Focuses on rhythmic compressions, point pressure, and joint stretching to unblock energy lines and restore body posture.",
-    duration: "60 Mins",
     category: "Specialty Therapies",
     image: "/dry_mass.png",
     features: ["Oil-Free Compression", "Postural Realignment", "Flexibility Enhancement", "Instant Energy Boost"]
@@ -50,7 +47,6 @@ export const SERVICES = [
     name: "Deep Tissue Massage",
     tagline: "Targeted Chronic Pain & Deep Muscle Knot Release",
     description: "Focuses on the deeper layers of muscle tissue and fascia. Uses slow, firm strokes to break down chronic knots, alleviate lower back pain, and release persistent tension.",
-    duration: "60 / 90 Mins",
     category: "Massage Therapies",
     image: "/deep_tis_mas.jpg",
     features: ["Knot & Tension Release", "Firm Anatomical Strokes", "Fascia Realignment", "Pain Relief Focus"]
@@ -60,7 +56,6 @@ export const SERVICES = [
     name: "Aromatherapy Massage",
     tagline: "Pure Herbal Aromas for Mental Peace & Anxiety Relief",
     description: "Combines gentle tactile massage techniques with natural floral and herbal essential oils. Calms the nervous system, eases anxiety, and promotes restful sleep.",
-    duration: "60 / 90 Mins",
     category: "Specialty Therapies",
     image: "/aromather.png",
     features: ["Lavender & Rose Extracts", "Nervous System Calming", "Stress Relief", "Aromatherapy Suite"]
@@ -70,9 +65,8 @@ export const SERVICES = [
     name: "Four Hands Massage",
     tagline: "Dual-Therapist Synchronized Royal Rejuvenation",
     description: "An extraordinary luxury experience where two master therapists work in seamless harmony, executing synchronized massage strokes to double your relaxation.",
-    duration: "60 / 90 Mins",
     category: "Luxury Signature",
-    image: "/4hands_mas.jpg",
+    image: "/4hands_m.jpg",
     features: ["Two Master Therapists", "Synchronized Movement", "Total Sensory Immersion", "Elite Royal Package"]
   },
   {
@@ -80,7 +74,6 @@ export const SERVICES = [
     name: "Tub Bath",
     tagline: "Botanical Mineral Soak & Herbal Hydro-Detox",
     description: "Soak away stress in a private aromatic warm tub bath enriched with mineral bath salts, floral petals, and therapeutic herbal extracts to detoxify the body and smooth the skin.",
-    duration: "45 Mins",
     category: "Hydrotherapy",
     image: "/bath_tub.jpeg",
     features: ["Mineral Bath Salts", "Fresh Rose & Herbal Extracts", "Detoxifying Soak", "Private Bath Suite"]
@@ -90,7 +83,6 @@ export const SERVICES = [
     name: "Jacuzzi",
     tagline: "Opulent Hydro-Jet Massage & Thermal Soak",
     description: "Experience total tranquility in our state-of-the-art Jacuzzi suite. Powerful hydro-jets massage tired muscles while warm circulating waters improve cardiovascular relaxation.",
-    duration: "45 / 60 Mins",
     category: "Hydrotherapy",
     image: "/jacuzzi.jpg",
     features: ["Hydro-Jet Massage", "Custom Lighting Ambiance", "Circulation Boosting", "VIP Luxury Suite"]
