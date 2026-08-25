@@ -7,7 +7,7 @@ export const SPA_INFO = {
   phone: "+91 91000 07856",
   rawPhone: "9100007856",
   whatsapp: "919100007856",
-  email: "info@rrluxuryspa.in",
+  email: "Rrluxuryspa01@gmail.com",
   timings: "10:00 AM – 9:00 PM (Open All 7 Days)",
   instagram: "https://www.instagram.com/rrluxuryspamanikonda",
   facebook: "https://www.facebook.com/rrluxuryspamanikonda",
@@ -21,9 +21,8 @@ export const SERVICES = [
     tagline: "Essential Aromatic Oil Therapy & Muscle Relief",
     description: "Immerse yourself in pure essential oils warming gently over your skin. Designed to relieve deep stress, improve blood circulation, and soothe tired muscles in a serene sanctuary.",
     duration: "60 / 90 Mins",
-    price: "₹1,999",
     category: "Massage Therapies",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+    image: "/oil_mas.jpg",
     features: ["Warm Essential Oils", "Custom Muscle Pressure", "Circulation Boosting", "Private Luxury Suite"]
   },
   {
@@ -32,9 +31,8 @@ export const SERVICES = [
     tagline: "Ultra-Nourishing Botanical Hydration & Soft Touch",
     description: "Indulge in a rich, velvety botanical massage cream that deeply hydrates dehydrated skin while restoring muscle flexibility and releasing physical fatigue.",
     duration: "60 / 90 Mins",
-    price: "₹2,199",
     category: "Massage Therapies",
-    image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80",
+    image: "/cream_mas.jpg",
     features: ["Deep Skin Hydration", "Silk Cream Texture", "Soft Tissue Release", "Calming Atmosphere"]
   },
   {
@@ -43,9 +41,8 @@ export const SERVICES = [
     tagline: "Oil-Free Acupressure & Traditional Stretch Therapy",
     description: "Ideal for fast muscle recovery without oils. Focuses on rhythmic compressions, point pressure, and joint stretching to unblock energy lines and restore body posture.",
     duration: "60 Mins",
-    price: "₹1,799",
     category: "Specialty Therapies",
-    image: "https://images.unsplash.com/photo-1519824145371-296894a0d96f?auto=format&fit=crop&w=800&q=80",
+    image: "/dry_mass.png",
     features: ["Oil-Free Compression", "Postural Realignment", "Flexibility Enhancement", "Instant Energy Boost"]
   },
   {
@@ -54,9 +51,8 @@ export const SERVICES = [
     tagline: "Targeted Chronic Pain & Deep Muscle Knot Release",
     description: "Focuses on the deeper layers of muscle tissue and fascia. Uses slow, firm strokes to break down chronic knots, alleviate lower back pain, and release persistent tension.",
     duration: "60 / 90 Mins",
-    price: "₹2,499",
     category: "Massage Therapies",
-    image: "https://images.unsplash.com/photo-1519824145371-296894a0d96f?auto=format&fit=crop&w=800&q=80",
+    image: "/deep_tis_mas.jpg",
     features: ["Knot & Tension Release", "Firm Anatomical Strokes", "Fascia Realignment", "Pain Relief Focus"]
   },
   {
@@ -65,9 +61,8 @@ export const SERVICES = [
     tagline: "Pure Herbal Aromas for Mental Peace & Anxiety Relief",
     description: "Combines gentle tactile massage techniques with natural floral and herbal essential oils. Calms the nervous system, eases anxiety, and promotes restful sleep.",
     duration: "60 / 90 Mins",
-    price: "₹2,299",
     category: "Specialty Therapies",
-    image: "https://images.unsplash.com/photo-1608248597444-24e5ef90f97e?auto=format&fit=crop&w=800&q=80",
+    image: "/aromather.png",
     features: ["Lavender & Rose Extracts", "Nervous System Calming", "Stress Relief", "Aromatherapy Suite"]
   },
   {
@@ -76,9 +71,8 @@ export const SERVICES = [
     tagline: "Dual-Therapist Synchronized Royal Rejuvenation",
     description: "An extraordinary luxury experience where two master therapists work in seamless harmony, executing synchronized massage strokes to double your relaxation.",
     duration: "60 / 90 Mins",
-    price: "₹3,999",
     category: "Luxury Signature",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+    image: "/4hands_mas.jpg",
     features: ["Two Master Therapists", "Synchronized Movement", "Total Sensory Immersion", "Elite Royal Package"]
   },
   {
@@ -87,9 +81,8 @@ export const SERVICES = [
     tagline: "Botanical Mineral Soak & Herbal Hydro-Detox",
     description: "Soak away stress in a private aromatic warm tub bath enriched with mineral bath salts, floral petals, and therapeutic herbal extracts to detoxify the body and smooth the skin.",
     duration: "45 Mins",
-    price: "₹1,899",
     category: "Hydrotherapy",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+    image: "/bath_tub.jpeg",
     features: ["Mineral Bath Salts", "Fresh Rose & Herbal Extracts", "Detoxifying Soak", "Private Bath Suite"]
   },
   {
@@ -98,9 +91,8 @@ export const SERVICES = [
     tagline: "Opulent Hydro-Jet Massage & Thermal Soak",
     description: "Experience total tranquility in our state-of-the-art Jacuzzi suite. Powerful hydro-jets massage tired muscles while warm circulating waters improve cardiovascular relaxation.",
     duration: "45 / 60 Mins",
-    price: "₹2,799",
     category: "Hydrotherapy",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
+    image: "/jacuzzi.jpg",
     features: ["Hydro-Jet Massage", "Custom Lighting Ambiance", "Circulation Boosting", "VIP Luxury Suite"]
   }
 ];

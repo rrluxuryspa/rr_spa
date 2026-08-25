@@ -12,23 +12,22 @@ export default function Logo({ size = 'medium', showText = false, className = ''
 
   return (
     <div className={`inline-flex items-center gap-3 group cursor-pointer ${className}`}>
-      {/* Official Uploaded Logo Image with Natural Aspect Ratio */}
+      {/* Official Uploaded Logo Image */}
       <div className="relative flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
         <img 
-          src="/rr_logo.png" 
+          src="/logo_img.jpg" 
           alt="RR LUXURY SPA Logo" 
-          className={`${currentHeight} w-auto max-w-full object-contain filter drop-shadow-md`}
-          style={{ aspectRatio: '1 / 1' }}
+          className={`${currentHeight} w-auto max-w-full object-contain filter drop-shadow-md rounded-lg`}
         />
       </div>
 
       {/* Optional Text */}
       {showText && (
         <div className="flex flex-col">
-          <span className="font-serif font-extrabold tracking-widest text-gold-gradient text-2xl md:text-3xl leading-tight drop-shadow-sm">
+          <span className="font-serif font-extrabold tracking-widest text-emerald-gradient text-2xl md:text-3xl leading-tight drop-shadow-sm">
             RR LUXURY SPA
           </span>
-          <span className="tracking-[0.25em] text-amber-900 font-sans font-bold uppercase text-[10px] sm:text-[11px]">
+          <span className="tracking-[0.25em] text-emerald-900 font-sans font-bold uppercase text-[10px] sm:text-[11px]">
             Manikonda, Hyderabad
           </span>
         </div>

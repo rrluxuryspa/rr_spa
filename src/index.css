@@ -4,8 +4,8 @@
 
 @layer base {
   body {
-    background-color: #fdfbf7;
-    color: #1a1a1a;
+    background-color: #f8fbf9;
+    color: #111827;
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
   
@@ -14,45 +14,45 @@
   }
 }
 
-/* Custom Gold Metallic Text & Gradients for Light Theme */
-.text-gold-gradient {
-  background: linear-gradient(135deg, #aa820a 0%, #d4af37 40%, #b8911b 70%, #866403 100%);
+/* Custom Royal Green Text & Gradients */
+.text-emerald-gradient {
+  background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #059669 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.bg-gold-gradient {
-  background: linear-gradient(135deg, #f6e6b4 0%, #d4af37 50%, #c49a1f 100%);
+.bg-emerald-gradient {
+  background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #059669 100%);
 }
 
-.bg-gold-gradient-hover {
-  background: linear-gradient(135deg, #ffffff 0%, #e5c158 50%, #aa820a 100%);
+.bg-emerald-gradient-hover {
+  background: linear-gradient(135deg, #047857 0%, #059669 50%, #10b981 100%);
 }
 
-.gold-glow {
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+.emerald-glow {
+  box-shadow: 0 4px 20px rgba(5, 150, 105, 0.25);
 }
 
-.gold-glow-lg {
-  box-shadow: 0 10px 35px rgba(212, 175, 55, 0.35);
+.emerald-glow-lg {
+  box-shadow: 0 10px 35px rgba(5, 150, 105, 0.35);
 }
 
 .white-glass {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(5, 150, 105, 0.3);
 }
 
 .spa-card-light {
   background: #ffffff;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(5, 150, 105, 0.3);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
 }
 
 .spa-card-light:hover {
-  border-color: rgba(212, 175, 55, 0.8);
-  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2), 0 4px 15px rgba(0, 0, 0, 0.06);
+  border-color: rgba(5, 150, 105, 0.8);
+  box-shadow: 0 12px 30px rgba(5, 150, 105, 0.2), 0 4px 15px rgba(0, 0, 0, 0.06);
   transform: translateY(-4px);
 }
 
@@ -81,12 +81,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #fdfbf7;
+  background: #f8fbf9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d4af37;
+  background: #059669;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #aa820a;
+  background: #064e3b;
 }

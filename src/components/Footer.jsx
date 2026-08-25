@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
-import { Phone, Mail, ChevronRight, MapPin, ArrowUp, Facebook, Instagram } from 'lucide-react';
+import { Phone, Mail, ChevronRight, ArrowUp, Facebook, Instagram, MessageSquare } from 'lucide-react';
 import { SPA_INFO } from '../data/spaData';
 
 export default function Footer({ activePage, setActivePage, onOpenBooking }) {
@@ -14,7 +14,7 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
   };
 
   return (
-    <footer className="relative bg-amber-950 text-slate-100 border-t border-amber-900/50 pt-16 overflow-hidden">
+    <footer className="relative bg-[#022c22] text-slate-100 border-t border-emerald-900/60 pt-16 overflow-hidden">
       
       {/* Main Footer Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
@@ -32,17 +32,17 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
             <div className="flex flex-col gap-2.5 mt-2 text-xs sm:text-sm text-slate-200">
               <a 
                 href={`tel:${SPA_INFO.rawPhone}`} 
-                className="flex items-center gap-2.5 hover:text-amber-300 transition-colors font-medium"
+                className="flex items-center gap-2.5 hover:text-emerald-300 transition-colors font-medium"
               >
-                <Phone className="w-4 h-4 text-amber-400 shrink-0" />
+                <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span>{SPA_INFO.phone}</span>
               </a>
 
               <a 
                 href={`mailto:${SPA_INFO.email}`} 
-                className="flex items-center gap-2.5 hover:text-amber-300 transition-colors font-medium"
+                className="flex items-center gap-2.5 hover:text-emerald-300 transition-colors font-medium"
               >
-                <Mail className="w-4 h-4 text-amber-400 shrink-0" />
+                <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span>{SPA_INFO.email}</span>
               </a>
             </div>
@@ -50,7 +50,7 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
 
           {/* COLUMN 2: IMPORTANT LINKS (5 Cols - Split 2-sub-columns) */}
           <div className="md:col-span-5">
-            <h3 className="font-serif font-extrabold text-base tracking-widest text-white uppercase mb-4 inline-block border-b-2 border-amber-500/80 pb-1">
+            <h3 className="font-serif font-extrabold text-base tracking-widest text-white uppercase mb-4 inline-block border-b-2 border-emerald-500/80 pb-1">
               IMPORTANT LINKS
             </h3>
 
@@ -59,33 +59,33 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
               <div className="flex flex-col gap-3">
                 <button 
                   onClick={() => { setActivePage('services'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                  className="flex items-center gap-1.5 text-slate-200 hover:text-amber-300 transition-colors font-semibold uppercase text-left group"
+                  className="flex items-center gap-1.5 text-slate-200 hover:text-emerald-300 transition-colors font-semibold uppercase text-left group"
                 >
-                  <ChevronRight className="w-3.5 h-3.5 text-amber-400 group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
                   <span>MASSAGES</span>
                 </button>
 
                 <button 
                   onClick={() => { setActivePage('services'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                  className="flex items-center gap-1.5 text-slate-200 hover:text-amber-300 transition-colors font-semibold uppercase text-left group"
+                  className="flex items-center gap-1.5 text-slate-200 hover:text-emerald-300 transition-colors font-semibold uppercase text-left group"
                 >
-                  <ChevronRight className="w-3.5 h-3.5 text-amber-400 group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
                   <span>HYDROTHERAPY</span>
                 </button>
 
                 <button 
                   onClick={() => { setActivePage('services'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                  className="flex items-center gap-1.5 text-slate-200 hover:text-amber-300 transition-colors font-semibold uppercase text-left group"
+                  className="flex items-center gap-1.5 text-slate-200 hover:text-emerald-300 transition-colors font-semibold uppercase text-left group"
                 >
-                  <ChevronRight className="w-3.5 h-3.5 text-amber-400 group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
                   <span>JACUZZI</span>
                 </button>
 
                 <button 
                   onClick={() => { setActivePage('services'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                  className="flex items-center gap-1.5 text-slate-200 hover:text-amber-300 transition-colors font-semibold uppercase text-left group"
+                  className="flex items-center gap-1.5 text-slate-200 hover:text-emerald-300 transition-colors font-semibold uppercase text-left group"
                 >
-                  <ChevronRight className="w-3.5 h-3.5 text-amber-400 group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
                   <span>TUB BATH</span>
                 </button>
               </div>
@@ -103,11 +103,11 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
                     onClick={() => handleNavClick(item.id)}
                     className={`flex items-center gap-1.5 transition-colors font-semibold uppercase text-left group ${
                       activePage === item.id 
-                        ? 'text-amber-300 font-extrabold' 
-                        : 'text-slate-200 hover:text-amber-300'
+                        ? 'text-emerald-300 font-extrabold' 
+                        : 'text-slate-200 hover:text-emerald-300'
                     }`}
                   >
-                    <ChevronRight className={`w-3.5 h-3.5 ${activePage === item.id ? 'text-amber-300' : 'text-amber-400/80 group-hover:translate-x-1'} transition-transform`} />
+                    <ChevronRight className={`w-3.5 h-3.5 ${activePage === item.id ? 'text-emerald-300' : 'text-emerald-400/80 group-hover:translate-x-1'} transition-transform`} />
                     <span>{item.label}</span>
                   </button>
                 ))}
@@ -117,7 +117,7 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
 
           {/* COLUMN 3: OUR ADDRESS & GET DIRECTIONS BUTTON (3 Cols) */}
           <div className="md:col-span-3 flex flex-col items-start gap-4">
-            <h3 className="font-serif font-extrabold text-base tracking-widest text-white uppercase border-b-2 border-amber-500/80 pb-1">
+            <h3 className="font-serif font-extrabold text-base tracking-widest text-white uppercase border-b-2 border-emerald-500/80 pb-1">
               OUR ADDRESS
             </h3>
 
@@ -129,7 +129,7 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SPA_INFO.address)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 px-6 py-3 rounded-xl bg-gold-gradient text-slate-950 font-extrabold text-xs tracking-wider uppercase border border-amber-400 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
+              className="mt-2 px-6 py-3 rounded-xl bg-emerald-gradient text-white font-extrabold text-xs tracking-wider uppercase border border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/30 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
             >
               <span>GET DIRECTIONS</span>
             </a>
@@ -139,12 +139,12 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
       </div>
 
       {/* BOTTOM SUB-FOOTER STRIP */}
-      <div className="bg-amber-950 border-t border-amber-900/80 py-4 px-4 sm:px-8">
+      <div className="bg-[#011e17] border-t border-emerald-950/80 py-4 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
           
           {/* Copyright */}
           <p className="text-center sm:text-left font-medium">
-            Copyright © {new Date().getFullYear()} <strong className="text-amber-300 font-bold">RR LUXURY SPA</strong>. All Rights Reserved.
+            Copyright © {new Date().getFullYear()} <strong className="text-emerald-400 font-bold">RR LUXURY SPA</strong>. All Rights Reserved.
           </p>
 
           {/* Social Media & Scroll To Top */}
@@ -155,7 +155,7 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
                 href={SPA_INFO.facebook} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-amber-900/80 border border-amber-700/60 flex items-center justify-center text-slate-200 hover:bg-gold-gradient hover:text-slate-950 transition-all shadow-sm"
+                className="w-8 h-8 rounded-full bg-emerald-900/60 border border-emerald-700/60 flex items-center justify-center text-slate-200 hover:bg-emerald-gradient hover:text-white transition-all shadow-sm"
                 title="Facebook"
               >
                 <Facebook className="w-3.5 h-3.5" />
@@ -165,7 +165,7 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
                 href={SPA_INFO.instagram} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-amber-900/80 border border-amber-700/60 flex items-center justify-center text-slate-200 hover:bg-gold-gradient hover:text-slate-950 transition-all shadow-sm"
+                className="w-8 h-8 rounded-full bg-emerald-900/60 border border-emerald-700/60 flex items-center justify-center text-slate-200 hover:bg-emerald-gradient hover:text-white transition-all shadow-sm"
                 title="Instagram"
               >
                 <Instagram className="w-3.5 h-3.5" />
@@ -175,7 +175,7 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
             {/* Scroll To Top Button */}
             <button
               onClick={scrollToTop}
-              className="w-9 h-9 rounded-full bg-gold-gradient text-slate-950 flex items-center justify-center shadow-md hover:scale-110 transition-transform"
+              className="w-9 h-9 rounded-full bg-emerald-gradient text-white flex items-center justify-center shadow-md hover:scale-110 transition-transform"
               title="Scroll to top"
             >
               <ArrowUp className="w-4 h-4" />
@@ -183,6 +183,56 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
           </div>
 
         </div>
+      </div>
+
+      {/* STICKY FLOATING ACTION BUTTONS FOR WHATSAPP, INSTAGRAM & FACEBOOK (BOTTOM LEFT) */}
+      <div className="fixed bottom-6 left-6 z-40 flex flex-col gap-3 items-center">
+        
+        {/* WhatsApp Sticky Button */}
+        <a
+          href={`https://wa.me/${SPA_INFO.whatsapp}?text=Hi%20RR%20Luxury%20Spa,%20I%20would%20like%20to%20book%20an%20appointment.`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform border-2 border-white/80 group relative"
+          title="Chat on WhatsApp"
+          aria-label="WhatsApp Chat"
+        >
+          <MessageSquare className="w-6 h-6 fill-white group-hover:rotate-12 transition-transform" />
+          <span className="absolute left-14 bg-slate-900 text-white text-[11px] font-bold px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+            WhatsApp Us
+          </span>
+        </a>
+
+        {/* Instagram Sticky Button */}
+        <a
+          href={SPA_INFO.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-gradient-to-tr from-amber-500 via-rose-600 to-purple-700 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform border-2 border-white/80 group relative"
+          title="Follow on Instagram"
+          aria-label="Instagram Profile"
+        >
+          <Instagram className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+          <span className="absolute left-14 bg-slate-900 text-white text-[11px] font-bold px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+            Instagram
+          </span>
+        </a>
+
+        {/* Facebook Sticky Button */}
+        <a
+          href={SPA_INFO.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform border-2 border-white/80 group relative"
+          title="Follow on Facebook"
+          aria-label="Facebook Page"
+        >
+          <Facebook className="w-6 h-6 fill-white group-hover:rotate-12 transition-transform" />
+          <span className="absolute left-14 bg-slate-900 text-white text-[11px] font-bold px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+            Facebook
+          </span>
+        </a>
+
       </div>
 
     </footer>

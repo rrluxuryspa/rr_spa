@@ -8,11 +8,11 @@ export default function AboutPage({ setActivePage, onOpenBooking }) {
       
       {/* 1. CUSTOM ABOUT US HERO BANNER IMAGE (ENTIRELY FILLS BANNER AREA PERFECTLY) */}
       <section className="relative w-full overflow-hidden bg-white border-b border-amber-300 shadow-md">
-        <div className="relative w-full aspect-[16/9] sm:aspect-[1.85/1] max-h-[640px] bg-amber-50 cursor-pointer group" onClick={() => onOpenBooking()}>
+        <div className="relative w-full bg-white cursor-pointer group" onClick={() => onOpenBooking()}>
           <img
-            src="/about_banner.jpg"
+            src="/abt_ban.png"
             alt="About Us - RR LUXURY SPA"
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+            className="w-full h-auto object-contain block group-hover:scale-105 transition-transform duration-700"
           />
           {/* Overlay Trigger for Booking */}
           <div className="absolute inset-0 z-10 flex items-end justify-start max-w-7xl mx-auto px-6 sm:px-12 pb-8 sm:pb-14 pointer-events-none">

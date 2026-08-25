@@ -42,31 +42,31 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
   const formContent = (
     <div className="relative">
       {submitted ? (
-        <div className="bg-white p-8 rounded-3xl border border-amber-400 text-center flex flex-col items-center gap-4 animate-fadeIn shadow-2xl">
-          <div className="w-16 h-16 rounded-full bg-amber-100 border-2 border-amber-500 flex items-center justify-center text-amber-900 mb-2 shadow-inner">
+        <div className="bg-white p-8 rounded-3xl border border-emerald-400 text-center flex flex-col items-center gap-4 animate-fadeIn shadow-2xl">
+          <div className="w-16 h-16 rounded-full bg-emerald-100 border-2 border-emerald-500 flex items-center justify-center text-emerald-900 mb-2 shadow-inner">
             <CheckCircle2 className="w-10 h-10" />
           </div>
 
-          <h3 className="font-serif text-2xl md:text-3xl text-gold-gradient font-bold">
+          <h3 className="font-serif text-2xl md:text-3xl text-emerald-gradient font-bold">
             Appointment Request Confirmed!
           </h3>
 
           <p className="text-slate-700 text-sm max-w-md font-medium">
-            Thank you, <strong className="text-amber-900">{formData.name}</strong>! Your appointment request for <strong className="text-slate-900">{formData.service}</strong> has been received.
+            Thank you, <strong className="text-emerald-900">{formData.name}</strong>! Your appointment request for <strong className="text-slate-900">{formData.service}</strong> has been received.
           </p>
 
-          <div className="bg-amber-50/80 p-5 rounded-2xl border border-amber-300 w-full max-w-md my-2 text-left text-xs space-y-2.5 shadow-sm">
-            <div className="flex justify-between border-b border-amber-200 pb-2">
+          <div className="bg-emerald-50/80 p-5 rounded-2xl border border-emerald-300 w-full max-w-md my-2 text-left text-xs space-y-2.5 shadow-sm">
+            <div className="flex justify-between border-b border-emerald-200 pb-2">
               <span className="text-slate-600 font-medium">Booking Reference:</span>
-              <span className="font-mono font-extrabold text-amber-900">{bookingRef}</span>
+              <span className="font-mono font-extrabold text-emerald-900">{bookingRef}</span>
             </div>
-            <div className="flex justify-between border-b border-amber-200 pb-2">
+            <div className="flex justify-between border-b border-emerald-200 pb-2">
               <span className="text-slate-600 font-medium">Date & Time:</span>
               <span className="font-bold text-slate-900">{formData.date} at {formData.time}</span>
             </div>
-            <div className="flex justify-between border-b border-amber-200 pb-2">
+            <div className="flex justify-between border-b border-emerald-200 pb-2">
               <span className="text-slate-600 font-medium">Selected Service:</span>
-              <span className="font-bold text-amber-900">{formData.service}</span>
+              <span className="font-bold text-emerald-900">{formData.service}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-slate-600 font-medium">Location:</span>
@@ -90,7 +90,7 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
 
             <button
               onClick={resetForm}
-              className="px-6 py-3 rounded-xl bg-gold-gradient text-slate-950 font-bold text-xs shadow-md transition-all hover:scale-105"
+              className="px-6 py-3 rounded-xl bg-emerald-gradient text-white font-bold text-xs shadow-md transition-all hover:scale-105"
             >
               Book Another
             </button>
@@ -99,10 +99,10 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="text-center mb-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-amber-900 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-300">
+            <span className="text-xs font-bold uppercase tracking-widest text-emerald-900 px-3.5 py-1 rounded-full bg-emerald-100 border border-emerald-300">
               Get In Touch & Reserve
             </span>
-            <h3 className="font-serif text-2xl md:text-3xl text-gold-gradient font-bold mt-2">
+            <h3 className="font-serif text-2xl md:text-3xl text-emerald-gradient font-bold mt-2">
               Book Your Luxury Session
             </h3>
             <p className="text-xs text-slate-600 mt-1 font-medium">
@@ -115,14 +115,14 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
             <div>
               <label className="block text-xs font-bold text-slate-800 mb-1">Your Name *</label>
               <div className="relative">
-                <User className="w-4 h-4 text-amber-800 absolute left-3 top-3.5" />
+                <User className="w-4 h-4 text-emerald-700 absolute left-3 top-3.5" />
                 <input
                   type="text"
                   required
                   placeholder="Enter your full name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-amber-300 text-slate-900 text-sm focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-500 shadow-sm transition-all"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-emerald-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-500 shadow-sm transition-all"
                 />
               </div>
             </div>
@@ -131,33 +131,33 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
             <div>
               <label className="block text-xs font-bold text-slate-800 mb-1">Phone Number *</label>
               <div className="relative">
-                <Phone className="w-4 h-4 text-amber-800 absolute left-3 top-3.5" />
+                <Phone className="w-4 h-4 text-emerald-700 absolute left-3 top-3.5" />
                 <input
                   type="tel"
                   required
                   placeholder="e.g. 91000 07856"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-amber-300 text-slate-900 text-sm focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-500 shadow-sm transition-all"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-emerald-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-500 shadow-sm transition-all"
                 />
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Service Selection Dropdown */}
+            {/* Service Selection Dropdown (Without price text) */}
             <div>
               <label className="block text-xs font-bold text-slate-800 mb-1">Select Service *</label>
               <div className="relative">
-                <Sparkles className="w-4 h-4 text-amber-800 absolute left-3 top-3.5" />
+                <Sparkles className="w-4 h-4 text-emerald-700 absolute left-3 top-3.5" />
                 <select
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-amber-300 text-slate-900 text-sm focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-500 shadow-sm transition-all appearance-none cursor-pointer"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-emerald-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-500 shadow-sm transition-all appearance-none cursor-pointer"
                 >
                   {SERVICES.map((s) => (
                     <option key={s.id} value={s.name} className="bg-white text-slate-900">
-                      {s.name} ({s.price})
+                      {s.name}
                     </option>
                   ))}
                 </select>
@@ -168,13 +168,13 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
             <div>
               <label className="block text-xs font-bold text-slate-800 mb-1">Email Address (Optional)</label>
               <div className="relative">
-                <Mail className="w-4 h-4 text-amber-800 absolute left-3 top-3.5" />
+                <Mail className="w-4 h-4 text-emerald-700 absolute left-3 top-3.5" />
                 <input
                   type="email"
                   placeholder="your.email@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-amber-300 text-slate-900 text-sm focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-500 shadow-sm transition-all"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-emerald-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-500 shadow-sm transition-all"
                 />
               </div>
             </div>
@@ -185,14 +185,14 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
             <div>
               <label className="block text-xs font-bold text-slate-800 mb-1">Preferred Date *</label>
               <div className="relative">
-                <Calendar className="w-4 h-4 text-amber-800 absolute left-3 top-3.5" />
+                <Calendar className="w-4 h-4 text-emerald-700 absolute left-3 top-3.5" />
                 <input
                   type="date"
                   required
                   min={new Date().toISOString().split('T')[0]}
                   value={formData.date}
                   onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-amber-300 text-slate-900 text-sm focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-500 shadow-sm transition-all cursor-pointer"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-emerald-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-500 shadow-sm transition-all cursor-pointer"
                 />
               </div>
             </div>
@@ -201,11 +201,11 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
             <div>
               <label className="block text-xs font-bold text-slate-800 mb-1">Preferred Time Slot *</label>
               <div className="relative">
-                <Clock className="w-4 h-4 text-amber-800 absolute left-3 top-3.5" />
+                <Clock className="w-4 h-4 text-emerald-700 absolute left-3 top-3.5" />
                 <select
                   value={formData.time}
                   onChange={(e) => setFormData({ ...formData, time: e.target.value })}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-amber-300 text-slate-900 text-sm focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-500 shadow-sm transition-all appearance-none cursor-pointer"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-emerald-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-500 shadow-sm transition-all appearance-none cursor-pointer"
                 >
                   {['10:00 AM', '11:30 AM', '01:00 PM', '02:30 PM', '04:00 PM', '05:30 PM', '07:00 PM', '08:00 PM'].map((t) => (
                     <option key={t} value={t} className="bg-white text-slate-900">
@@ -221,13 +221,13 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
           <div>
             <label className="block text-xs font-bold text-slate-800 mb-1">Special Requests / Notes</label>
             <div className="relative">
-              <MessageSquare className="w-4 h-4 text-amber-800 absolute left-3 top-3.5" />
+              <MessageSquare className="w-4 h-4 text-emerald-700 absolute left-3 top-3.5" />
               <textarea
                 rows={2}
                 placeholder="Mention any specific pressure preferences, therapist gender requirement, or jacuzzi add-on..."
                 value={formData.notes}
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-amber-300 text-slate-900 text-sm focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-500 shadow-sm transition-all resize-none"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-emerald-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-500 shadow-sm transition-all resize-none"
               />
             </div>
           </div>
@@ -235,9 +235,9 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-4 rounded-xl bg-gold-gradient text-slate-950 font-extrabold text-base border border-amber-400 hover:shadow-xl hover:shadow-spa-gold/30 hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-2 mt-4"
+            className="w-full py-4 rounded-xl bg-emerald-gradient text-white font-extrabold text-base border border-emerald-500 hover:shadow-xl hover:shadow-emerald-600/30 hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-2 mt-4"
           >
-            <Sparkles className="w-5 h-5 fill-slate-950" />
+            <Sparkles className="w-5 h-5 fill-white" />
             <span>Confirm Appointment Reservation</span>
           </button>
         </form>
@@ -248,10 +248,10 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
   if (isModal) {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-md animate-fadeIn">
-        <div className="relative w-full max-w-2xl bg-white border-2 border-amber-300 rounded-3xl p-6 sm:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
+        <div className="relative w-full max-w-2xl bg-white border-2 border-emerald-300 rounded-3xl p-6 sm:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 text-amber-900 hover:text-slate-950 rounded-full bg-amber-50 border border-amber-300 hover:border-amber-500 transition-all"
+            className="absolute top-4 right-4 p-2 text-emerald-900 hover:text-slate-950 rounded-full bg-emerald-50 border border-emerald-300 hover:border-emerald-500 transition-all"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -263,8 +263,8 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
   }
 
   return (
-    <div className="p-6 sm:p-8 rounded-3xl bg-white border-2 border-amber-300/80 shadow-xl relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-64 h-64 bg-amber-100/40 rounded-full blur-3xl pointer-events-none" />
+    <div className="p-6 sm:p-8 rounded-3xl bg-white border-2 border-emerald-300/80 shadow-xl relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none" />
       {formContent}
     </div>
   );

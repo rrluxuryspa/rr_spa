@@ -17,14 +17,14 @@ import {
 export default function ServicesCarouselSection({ onOpenBooking }) {
   // Mapping custom icons for each service matching reference style
   const serviceIcons = {
-    'oil-massage': <Droplet className="w-10 h-10 text-amber-700 stroke-[1.5]" />,
-    'cream-massage': <Sparkles className="w-10 h-10 text-amber-700 stroke-[1.5]" />,
-    'dry-massage': <HeartHandshake className="w-10 h-10 text-amber-700 stroke-[1.5]" />,
-    'deep-tissue': <Flame className="w-10 h-10 text-amber-700 stroke-[1.5]" />,
-    'aroma-massage': <Wind className="w-10 h-10 text-amber-700 stroke-[1.5]" />,
-    'four-hands-massage': <Users className="w-10 h-10 text-amber-700 stroke-[1.5]" />,
-    'tub-bath': <Bath className="w-10 h-10 text-amber-700 stroke-[1.5]" />,
-    'jacuzzi': <Waves className="w-10 h-10 text-amber-700 stroke-[1.5]" />
+    'oil-massage': <Droplet className="w-10 h-10 text-emerald-800 stroke-[1.5]" />,
+    'cream-massage': <Sparkles className="w-10 h-10 text-emerald-800 stroke-[1.5]" />,
+    'dry-massage': <HeartHandshake className="w-10 h-10 text-emerald-800 stroke-[1.5]" />,
+    'deep-tissue': <Flame className="w-10 h-10 text-emerald-800 stroke-[1.5]" />,
+    'aroma-massage': <Wind className="w-10 h-10 text-emerald-800 stroke-[1.5]" />,
+    'four-hands-massage': <Users className="w-10 h-10 text-emerald-800 stroke-[1.5]" />,
+    'tub-bath': <Bath className="w-10 h-10 text-emerald-800 stroke-[1.5]" />,
+    'jacuzzi': <Waves className="w-10 h-10 text-emerald-800 stroke-[1.5]" />
   };
 
   const [currentPage, setCurrentPage] = useState(0);
@@ -47,16 +47,16 @@ export default function ServicesCarouselSection({ onOpenBooking }) {
   );
 
   return (
-    <section className="py-20 bg-[#fdfbf7] border-b border-amber-200/80 relative overflow-hidden">
+    <section className="py-20 bg-[#f8fbf9] border-b border-emerald-200/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header Matching Reference Image */}
+        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 mb-2">
             <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-              Our <span className="text-amber-800">SERVICES</span>
+              Our <span className="text-emerald-800">SERVICES</span>
             </h2>
-            <span className="font-serif italic text-amber-700 text-lg sm:text-xl font-light">
+            <span className="font-serif italic text-emerald-700 text-lg sm:text-xl font-light">
               Relax Zone
             </span>
           </div>
@@ -72,16 +72,16 @@ export default function ServicesCarouselSection({ onOpenBooking }) {
             <div
               key={service.id}
               onClick={() => onOpenBooking(service.name)}
-              className="bg-white p-8 rounded-3xl border border-amber-200/70 shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col items-center text-center justify-between group cursor-pointer h-[320px]"
+              className="bg-white p-8 rounded-3xl border border-emerald-200/70 shadow-sm hover:shadow-xl hover:border-emerald-400 transition-all duration-300 flex flex-col items-center text-center justify-between group cursor-pointer h-[320px]"
             >
               {/* Line Art Icon Container */}
-              <div className="w-20 h-20 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-inner">
-                {serviceIcons[service.id] || <Sparkles className="w-10 h-10 text-amber-700 stroke-[1.5]" />}
+              <div className="w-20 h-20 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-inner">
+                {serviceIcons[service.id] || <Sparkles className="w-10 h-10 text-emerald-800 stroke-[1.5]" />}
               </div>
 
               {/* Title & Tagline */}
               <div>
-                <h3 className="font-serif text-xl font-extrabold text-slate-900 group-hover:text-amber-800 transition-colors mb-2">
+                <h3 className="font-serif text-xl font-extrabold text-slate-900 group-hover:text-emerald-800 transition-colors mb-2">
                   {service.name}
                 </h3>
                 
@@ -91,8 +91,8 @@ export default function ServicesCarouselSection({ onOpenBooking }) {
               </div>
 
               {/* Bottom Meta & Price Badge */}
-              <div className="w-full pt-3 border-t border-amber-100 flex items-center justify-between">
-                <span className="text-xs font-bold text-amber-900 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+              <div className="w-full pt-3 border-t border-emerald-100 flex items-center justify-between">
+                <span className="text-xs font-bold text-emerald-900 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                   {service.price}
                 </span>
 
@@ -101,7 +101,7 @@ export default function ServicesCarouselSection({ onOpenBooking }) {
                     e.stopPropagation();
                     onOpenBooking(service.name);
                   }}
-                  className="p-2 rounded-full bg-gold-gradient text-slate-950 hover:scale-110 transition-transform shadow"
+                  className="p-2 rounded-full bg-emerald-gradient text-white hover:scale-110 transition-transform shadow"
                   title={`Book ${service.name}`}
                 >
                   <Calendar className="w-4 h-4" />
@@ -112,11 +112,11 @@ export default function ServicesCarouselSection({ onOpenBooking }) {
           ))}
         </div>
 
-        {/* Carousel Navigation Controls (< > Buttons at Bottom Center like reference) */}
+        {/* Carousel Navigation Controls */}
         <div className="flex items-center justify-center gap-3 mt-12">
           <button
             onClick={prevPage}
-            className="w-12 h-12 rounded-xl bg-slate-800 hover:bg-gold-gradient text-white hover:text-slate-950 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-105"
+            className="w-12 h-12 rounded-xl bg-slate-900 hover:bg-emerald-700 text-white flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-105"
             aria-label="Previous Services Page"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -129,7 +129,7 @@ export default function ServicesCarouselSection({ onOpenBooking }) {
                 key={idx}
                 onClick={() => setCurrentPage(idx)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  idx === currentPage ? 'w-6 bg-amber-600' : 'w-2 bg-slate-300'
+                  idx === currentPage ? 'w-6 bg-emerald-600' : 'w-2 bg-slate-300'
                 }`}
                 aria-label={`Go to page ${idx + 1}`}
               />
@@ -138,7 +138,7 @@ export default function ServicesCarouselSection({ onOpenBooking }) {
 
           <button
             onClick={nextPage}
-            className="w-12 h-12 rounded-xl bg-slate-800 hover:bg-gold-gradient text-white hover:text-slate-950 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-105"
+            className="w-12 h-12 rounded-xl bg-slate-900 hover:bg-emerald-700 text-white flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-105"
             aria-label="Next Services Page"
           >
             <ChevronRight className="w-6 h-6" />

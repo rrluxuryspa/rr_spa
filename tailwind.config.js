@@ -8,19 +8,19 @@ export default {
     extend: {
       colors: {
         spa: {
-          light: '#fdfbf7',
+          light: '#f8fbf9',
           white: '#ffffff',
           card: '#ffffff',
-          cardHover: '#faf7f0',
-          border: 'rgba(212, 175, 55, 0.35)',
-          gold: '#d4af37',
-          goldLight: '#f9f1d8',
-          goldDark: '#aa820a',
-          goldAccent: '#b8911b',
-          goldGlow: 'rgba(212, 175, 55, 0.25)',
-          darkText: '#1a1a1a',
-          slateText: '#334155',
-          muted: '#64748b'
+          cardHover: '#f0fdf4',
+          border: 'rgba(5, 150, 105, 0.35)',
+          emerald: '#064e3b',
+          emeraldLight: '#ecfdf5',
+          emeraldDark: '#022c22',
+          emeraldAccent: '#059669',
+          emeraldGlow: 'rgba(5, 150, 105, 0.25)',
+          darkText: '#064e3b',
+          slateText: '#1f2937',
+          muted: '#4b5563'
         }
       },
       fontFamily: {
