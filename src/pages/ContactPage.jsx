@@ -107,10 +107,10 @@ export default function ContactPage({ onOpenBooking }) {
                     <span>Manikonda Location Map</span>
                   </div>
                   <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SPA_INFO.address)}`}
+                    href={SPA_INFO.mapLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[11px] text-amber-900 hover:underline flex items-center gap-1 font-bold"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 mt-2 rounded-lg bg-emerald-50 text-emerald-800 font-bold text-[11px] uppercase tracking-wider hover:bg-emerald-100 hover:scale-105 transition-all border border-emerald-200"
                   >
                     <span>Open in Maps</span>
                     <ExternalLink className="w-3 h-3" />

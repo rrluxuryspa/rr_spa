@@ -126,7 +126,7 @@ export default function Footer({ activePage, setActivePage, onOpenBooking }) {
             </p>
 
             <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SPA_INFO.address)}`}
+              href={SPA_INFO.mapLink}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 px-6 py-3 rounded-xl bg-emerald-gradient text-white font-extrabold text-xs tracking-wider uppercase border border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/30 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
