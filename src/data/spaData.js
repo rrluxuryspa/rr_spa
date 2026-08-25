@@ -9,7 +9,7 @@ export const SPA_INFO = {
   whatsapp: "919100007856",
   email: "Rrluxuryspa01@gmail.com",
   timings: "10:00 AM – 9:00 PM (Open All 7 Days)",
-  instagram: "https://www.instagram.com/rrluxuryspamanikonda",
+  instagram: "https://www.instagram.com/rrluxuryspa01?utm_source=qr&igsi=MXh2bXB6aGplZWh5Ng==",
   facebook: "https://www.facebook.com/rrluxuryspamanikonda",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.123456789!2d78.3845678!3d17.4012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb971234567890%3A0x1234567890abcdef!2sManikonda%2C%20Hyderabad%2C%20Telangana%20500089!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
 };
