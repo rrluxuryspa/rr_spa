@@ -21,6 +21,17 @@
     </script>
   </head>
   <body class="bg-spa-light text-slate-900 font-sans antialiased selection:bg-emerald-600 selection:text-white min-h-screen">
+    <!-- Global Preloader -->
+    <div id="global-loader" style="position: fixed; inset: 0; background-color: #fdfbf7; z-index: 99999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease;">
+      <img src="/logo_img.jpg" alt="Loading..." style="height: 100px; width: auto; border-radius: 8px; animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;" />
+      <style>
+        @keyframes pulse {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.6; transform: scale(0.95); }
+        }
+      </style>
+    </div>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
