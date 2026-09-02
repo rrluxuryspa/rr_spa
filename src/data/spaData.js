@@ -11,7 +11,7 @@ export const SPA_INFO = {
   timings: "10:00 AM – 9:00 PM (Open All 7 Days)",
   instagram: "https://www.instagram.com/rrluxuryspa01?utm_source=qr&igsi=MXh2bXB6aGplZWh5Ng==",
   facebook: "https://www.facebook.com/rrluxuryspamanikonda",
-  mapLink: "https://www.google.com/maps/place/17%C2%B024'21.5%22N+78%C2%B022'28.8%22E/@17.4059772,78.3720907,17z/data=!3m1!4b1!4m4!3m3!8m2!3d17.4059772!4d78.3746656?hl=en&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D",
+  mapLink: "https://maps.app.goo.gl/eMyypD65yJZno15i6?g_st=ipc",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3807.0396009855584!2d78.37209067516548!3d17.40597718348425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDI0JzIxLjUiTiA3OMKwMjInMjguOCJF!5e0!3m2!1sen!2sin!4v1724578500000!5m2!1sen!2sin"
 };
 
