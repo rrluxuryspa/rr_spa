@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import StickyPhoneButton from './components/StickyPhoneButton';
 
 export default function App() {
   // Initialize state based on the current URL path
@@ -95,6 +96,9 @@ export default function App() {
         setActivePage={setActivePage}
         onOpenBooking={() => handleOpenBooking()}
       />
+
+      {/* Sticky Call Button */}
+      <StickyPhoneButton />
 
     </div>
   );
