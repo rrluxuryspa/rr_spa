@@ -21,6 +21,14 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
     const refId = 'RR-' + Math.floor(100000 + Math.random() * 900000);
     setBookingRef(refId);
     setSubmitted(true);
+
+    // Automatically navigate to WhatsApp
+    let message = `Hi RR Luxury Spa, I just booked an appointment (Ref: ${refId}) for ${formData.service} on ${formData.date} at ${formData.time}. My name is ${formData.name} and my number is ${formData.phone}.`;
+    if (formData.notes) {
+      message += ` Notes: ${formData.notes}`;
+    }
+    const whatsappUrl = `https://wa.me/${SPA_INFO.whatsapp}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   const resetForm = () => {
@@ -79,15 +87,6 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full justify-center">
-            <a
-              href={`https://wa.me/${SPA_INFO.whatsapp}?text=Hi%20RR%20Luxury%20Spa,%20I%20just%20booked%20an%20appointment%20(Ref:%20${bookingRef})%20for%20${encodeURIComponent(formData.service)}.`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all"
-            >
-              <span>Confirm on WhatsApp</span>
-            </a>
-
             <button
               onClick={resetForm}
               className="px-6 py-3 rounded-xl bg-emerald-gradient text-white font-bold text-xs shadow-md transition-all hover:scale-105"
@@ -135,9 +134,16 @@ export default function BookingForm({ isModal = false, onClose = () => {}, prese
                 <input
                   type="tel"
                   required
-                  placeholder="e.g. 91000 07856"
+                  maxLength="10"
+                  pattern="[0-9]{10}"
+                  placeholder="e.g. 9100007856"
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, '');
+                    if (val.length <= 10) {
+                      setFormData({ ...formData, phone: val });
+                    }
+                  }}
                   className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-emerald-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-500 shadow-sm transition-all"
                 />
               </div>
